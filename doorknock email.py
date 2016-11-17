@@ -20,7 +20,7 @@ for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
 		frames.append(reading)
 maxrms=max(frames)
 #found out the average disturbance in my room is 20,took a buffer of 1000
-if maxrms>1000:
+if maxrms>5000:
 	server = smtplib.SMTP('smtp.gmail.com', 587)
 	server.ehlo()
 	server.starttls()
